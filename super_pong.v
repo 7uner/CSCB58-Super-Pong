@@ -186,24 +186,7 @@ module main(
 	integer level = 1;
 	integer gameover = 0;
 	wire enable, pol;
-
-	wire [11:0]textSelect;
-   	Pixel_On_Text2 #(.displayText("GAME OVER, YOUR SCORE IS")) t1(
-		 CLOCK_50,
-		 20, // text position.x (top left)
-		 20, // text position.y (top l;  // result, 1 if current pixel is on text, 0 otherwise
-		 x, // current position.x
-		 y, // current position.y
-		 textSelect[0]  // result, 1 if current pixel is on text, 0 otherwise
-	);	
-	Pixel_On_Text2 #(.displayText("KEY[0]-restart")) t4(
-		 CLOCK_50,
-		 20, // text position.x (top left)
-		 40, // text position.y (top left)
-		 x, // current position.xendmodule
-		 y, // current position.y
-		 textSelect[3]  // result, 1 if current pixel is on text, 0 otherwise
-   );
+   	
 	
 	//rate devider to select speed
 	RateDivider rate(
